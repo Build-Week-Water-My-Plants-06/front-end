@@ -1,15 +1,17 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import logo from '../images/Logo.jpg';
 
 const HeaderStyled = styled.div`
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  background-color: lightgray;
+  background-color: transparent;
   justify-content: space-between;
   align-items: center;
-  h3 {
-    padding: 0 1rem;
+  img {
+    height: 5rem;
   }
   nav {
     padding: 0 3rem;
@@ -23,7 +25,7 @@ const HeaderStyled = styled.div`
     text-decoration: none;
     color: black;
     height: 100%;
-    padding: 1.25rem 3rem;
+    padding: 1.82rem 3rem;
     display: block;
     :hover {
       background-color: gray;
@@ -34,7 +36,7 @@ const HeaderStyled = styled.div`
 const Header = (props) => {
   return (
     <HeaderStyled>
-      <h3>Water My Plants</h3>
+      <img src={logo} alt="business logo" />
       <nav>
         <div>
           <a href="/">Home</a>
