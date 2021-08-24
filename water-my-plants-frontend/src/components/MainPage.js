@@ -18,13 +18,16 @@ const MainStyled = styled.div`
     max-width: 70rem;
     font-size: 1.2rem;
   }
-  button {
+  a {
     margin: 2rem 0;
+  }
+  button {
     padding: .9rem 2rem ;
     font-size: 1rem;
     border-radius: 1rem;
     :hover {
       background-color: #f5cace;
+      cursor: pointer;
     }
   }
 `;
@@ -35,7 +38,9 @@ const MainPage = (props) => {
       <h1>Water My Plants</h1>
       <p> Never delay another water day. Water My Plants is an app that remembers when your beloved flora needs to be watered so you don't have to. With our set it and forget it design, we make it easy to water your plants on time.</p>
       <p>For our VIP plant enthusiasts, Water My Plants allows subscribers to track their plant's health using a visual diary with an inclusive journal. Simply capture a photo of your flora and have a visual representation of changes to your plant's daily health and growth! </p>
-      <button>Get Started now!</button>
+      <a href="/">
+        <button>Get Started now!</button>
+      </a>
     </MainStyled>
   );
 };

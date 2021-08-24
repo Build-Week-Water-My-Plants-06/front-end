@@ -28,7 +28,7 @@ const HeaderStyled = styled.div`
     padding: 1.82rem 3rem;
     display: block;
     :hover {
-      background-color: gray;
+      background-color: #f5cace;
     }
   }
 `
@@ -45,7 +45,7 @@ const Header = (props) => {
           <a href="/">Contact</a>
         </div>
         <div>
-          <a href="/">Login</a>
+          <a href="/login">Login</a>
         </div>
       </nav>
     </HeaderStyled>
