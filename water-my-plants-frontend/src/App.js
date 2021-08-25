@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import React, {useState, useEffect} from 'react';
+import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
-import styled from "styled-components";
-
-import Header from "./components/Header";
-import MainPage from "./components/MainPage";
-import LoginPage from "./components/LoginPage";
+import Header from './components/Header';
+import MainPage from './components/MainPage';
+import LoginPage from './components/LoginPage';
+import SignupPage from './components/SignupPage';
 
 import background from "./images/Background.jpg";
 import signinBack from "./images/FormBackground.jpg";
@@ -21,10 +21,20 @@ const StyledApp = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-
-  @media ${(pr) => pr.theme.breakpointMobile} {
-  }
 `;
+
+const initialSignupValues = {
+  username: '',
+  phone: '',
+  password: '',
+  passconfirm: ''
+};
+const initialSignupErrors = {
+  username: '',
+  phone: '',
+  password: '',
+  passconfirm: ''
+};
 
 function App() {
   const [appBack, setAppBack] = useState(background);
@@ -47,6 +57,9 @@ function App() {
       <Switch>
         <Route path="/login">
           <LoginPage changeBack={changeBackground} />
+        </Route>
+        <Route path="/signup">
+          <SignupPage changeBack={changeBackground}/>
         </Route>
         <Route path="/">
           <MainPage />
