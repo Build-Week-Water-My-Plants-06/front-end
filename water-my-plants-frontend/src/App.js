@@ -1,48 +1,52 @@
-import React, {useState, useEffect} from 'react';
-import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import { Switch, Route } from "react-router-dom";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Header from './components/Header';
-import MainPage from './components/MainPage';
-import LoginPage from './components/LoginPage';
+import Header from "./components/Header";
+import MainPage from "./components/MainPage";
+import LoginPage from "./components/LoginPage";
 
-import background from './images/Background.jpg';
-import signinBack from './images/FormBackground.jpg';
+import background from "./images/Background.jpg";
+import signinBack from "./images/FormBackground.jpg";
 
 let currentBackground = background;
 
-
 const StyledApp = styled.div`
   background-image: url(${currentBackground});
-  height: 120vh;
+  height: 100vh;
+  /* height: 120vh; */
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+
+  @media ${(pr) => pr.theme.breakpointMobile} {
+  }
 `;
 
 function App() {
   const [appBack, setAppBack] = useState(background);
 
   useEffect(() => {
-    const rootApp = document.querySelector('#root div');
+    const rootApp = document.querySelector("#root div");
     rootApp.style.backgroundImage = `url(${appBack})`;
     rootApp.style.backgroundPosition = `left top`;
-  },[appBack]);
+  }, [appBack]);
 
-  const changeBackground = page => {
-    if (page === 'form') {
+  const changeBackground = (page) => {
+    if (page === "form") {
       setAppBack(signinBack);
     }
-  }
+  };
 
   return (
     <StyledApp>
       <Header />
       <Switch>
         <Route path="/login">
-          <LoginPage changeBack={changeBackground}/>
+          <LoginPage changeBack={changeBackground} />
         </Route>
         <Route path="/">
           <MainPage />
@@ -51,6 +55,5 @@ function App() {
     </StyledApp>
   );
 }
-
 
 export default App;
