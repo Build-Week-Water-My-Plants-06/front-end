@@ -8,7 +8,7 @@ const HeaderStyled = styled.div`
   display: flex;
   flex-flow: row nowrap;
   background-color: transparent;
-  border-bottom: 1px solid green; //Thomas please change this color to the green from the logo
+  border-bottom: 1px solid #585b3c; 
   justify-content: space-between;
   align-items: center;
   img {
@@ -36,7 +36,7 @@ const HeaderStyled = styled.div`
     :hover {
       background-color: ${(pr) => pr.theme.primaryColor};
       border-radius: 50%;
-      color: purple; //Thomas please change this color on hover to the pot (purple) color
+      color: #915672; 
     }
   }
   @media ${(pr) => pr.theme.breakpointMobile} {
