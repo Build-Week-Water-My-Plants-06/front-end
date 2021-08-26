@@ -10,6 +10,8 @@ const initialFormValues = {
   password: '',
   // passconfirm: '',
   phone: '',
+  firstName: '',
+  lastName: '',
   tos: false
 }
 const initialFormErrors = {
@@ -17,6 +19,8 @@ const initialFormErrors = {
   password: '',
   // passconfirm: '',
   phone: '',
+  firstName: '',
+  lastName: '',
   tos: false
 }
 const SignupPage = (props) => {
@@ -64,6 +68,26 @@ const SignupPage = (props) => {
             />
           </label>
           <p class="warning">{formErrors.username}</p>
+          <label>Enter a First Name<br/>
+            <input 
+              name="firstName"
+              placeHolder="Enter first name"
+              type="text"
+              onChange={inputChange}
+              value={formValues.firstName}
+            />
+          </label>
+          <p class="warning">{formErrors.firstName}</p>
+          <label>Enter a Last Name<br/>
+            <input 
+              name="lastName"
+              placeHolder="Enter last name"
+              type="text"
+              onChange={inputChange}
+              value={formValues.lastName}
+            />
+          </label>
+          <p class="warning">{formErrors.lastName}</p>
           <label>Enter a Phone Number<br/>
             <input 
               name="phone"
