@@ -10,22 +10,24 @@ const formSchema = yup.object().shape({
     .min(3, 'Username must be at least 3 characters in length'),
   password: yup
     .string()
-    .trim()
     .required('You must enter a password')
-    .min(15, 'Password must be 15 or more characters'),
-  passconfirm: yup
-    .string()
-    .trim()
-    .required('You must confirm your password')
-    .test('match',
-      'passwords do not match',
-      function(emailConfirmation) {
-        return emailConfirmation === this.parent.password;
-      }
-    ),
+    .min(15, 'Must be 15 characters'),
+  // passconfirm: yup
+  //   .string()
+  //   .required('You must confirm your password')
+  //   .test('passwords-match',
+  //     'passwords do not match',
+  //     function(value) {
+  //       return this.parent.password === value;
+  //     }
+  //   ), 
+    //  .oneOf([yup.ref('password'), null], 'Passwords must match'),
   phone: yup
     .string()
-    .matches(phoneRegExp, 'Please enter a valid phone number')
+    .matches(phoneRegExp, 'Please enter a valid phone number'),
+  tos: yup
+    .boolean()
+    .oneOf([true], 'You must accept the Terms of Service')
 });
 
 export default formSchema;
