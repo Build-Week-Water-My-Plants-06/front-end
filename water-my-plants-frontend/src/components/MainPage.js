@@ -8,18 +8,21 @@ const MainStyled = styled.div`
   flex-flow: column nowrap;
   align-items: center;
   font-family: "Hina Mincho", serif;
+  text-align: center;
   line-height: 1.3;
   h1 {
     font-family: "Cinzel Decorative", cursive;
     margin: 0;
     padding-top: 1rem;
-    font-size: 4rem;
+    font-size: 3.2rem;
   }
   p {
-    max-width: 70rem;
+    max-width: 65rem;
     font-size: ${(pr) => pr.theme.baseFontSize};
+    margin: 1rem;
   }
   button {
+    margin-top: 1rem;
     padding: 0.9rem 2rem;
     font-size: ${(pr) => pr.theme.buttonFontSize};
     border-radius: 1rem;
@@ -32,15 +35,12 @@ const MainStyled = styled.div`
   }
   @media ${(pr) => pr.theme.breakpointMobile} {
     h1 {
-      margin: 0;
-      font-size: 2rem;
-      padding-top: 1rem;
+      font-size: 1.8rem;
     }
-    .p1 {
+    p {
       font-size: ${(pr) => pr.theme.mobileBaseFontSize};
     }
     .p2 {
-      font-size: ${(pr) => pr.theme.mobileBaseFontSize};
       margin-left: 46%;
     }
     button {

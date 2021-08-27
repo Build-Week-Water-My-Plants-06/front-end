@@ -8,12 +8,12 @@ const HeaderStyled = styled.div`
   display: flex;
   flex-flow: row nowrap;
   background-color: transparent;
-  border-bottom: 1px solid #585b3c; 
+  border-bottom: 1px solid #585b3c;
   justify-content: space-between;
   align-items: center;
   img {
-    height: 8rem;
-    width: 14rem;
+    height: 6rem;
+    width: 12rem;
     margin: 0.5%;
     border-radius: 50%;
   }
@@ -36,7 +36,7 @@ const HeaderStyled = styled.div`
     :hover {
       background-color: ${(pr) => pr.theme.primaryColor};
       border-radius: 50%;
-      color: #915672; 
+      color: #915672;
     }
   }
   @media ${(pr) => pr.theme.breakpointMobile} {
