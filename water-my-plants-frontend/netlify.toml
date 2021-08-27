@@ -1,0 +1,3 @@
+base = "water-my-plants-frontend/"
+publish = "build-output/"
+command = "echo 'default context'"
