@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# front-end
+☝️ Proposal
+What problem does your app solve?
+- It's a reminder app to help people remember to water their plants on a consistent basis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Be as specific as possible; how does your app solve the problem?
+- The user will set inside of the app the frequency for how often they would like to water their plants, and the app will send them a reminder shortly before the set interval.
 
-## Available Scripts
+What is the mission statement?
+- No more wilted plants
 
-In the project directory, you can run:
+💡 Features
+What features are required for your minimum viable product?
+- user can sign-up / create an account by providing a unique username, a valid mobile phoneNumber and a password.
+- user can login to an authenticated session using the credentials provided at account creation / signup.
+- Authenticated user can Create, Update and Delete a plant object. At a minimum, each plant must have the following properties:
+id: Integer
+nickname: String
+species : String
+h2oFrequency: Type determined by implementation
+image: (optional)
+- Authenticated user can view a list of created plants. A plant can be deleted or selected to present user with a detail view where user can then update any property of the selected plant.
+- Authenticated user can update their phoneNumber and password.
 
-### `npm start`
+What features may you wish to put in a future release?
+- A day before reminder
+- Add a proxy user to water your plants when you’re out of town.
+- A little daily digest article on other plants or their plant of choice
+- A list of alarm sound options
+- A photo diary of plant with the ability to take plant photos to track plant growth and progress.
+- Daily notes for plants state and health
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+What do the top 3 similar apps do for their users?
+- A theme option to change the look of the app
+- Daily notes
+- Subscription plan for extra features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+🛠 Frameworks - Libraries
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+What 3rd party frameworks/libraries are you considering using?
+- 
 
-### `npm run build`
+Do the APIs you need require you to contact them to gain access?
+-
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Are you required to pay to use said API(s)?
+-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🎯 Target Audience
 
-### `npm run eject`
+Who is your target audience? Be specific.
+- Plant lovers across all age groups
+- Busy individuals who often forget to water their plants
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+What feedback have you gotten from potential users?
+- Have you validated this problem and your solution with a target audience? Describe how.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔑 Prototype Key Feature(s)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+How long do you think it will take to implement these features?
+- Longer then a week
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Do you anticipate working on stretch functionality after completion of a Minimal Viable Product?
+- If time allows and team participation is present.
